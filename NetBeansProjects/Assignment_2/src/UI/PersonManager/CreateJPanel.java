@@ -15,9 +15,8 @@ import javax.swing.*;
  */
 public class CreateJPanel extends javax.swing.JPanel {
 
-    Person person;
-    JPanel userProcessContainer;
-    PersonDirectory personDirectory;
+    private JPanel userProcessContainer;
+    private PersonDirectory personDirectory;
     
     /**
      * Creates new form createJPanel
@@ -25,8 +24,8 @@ public class CreateJPanel extends javax.swing.JPanel {
     public CreateJPanel(JPanel container, PersonDirectory directory) {
         initComponents();
         
-        userProcessContainer = container;
-        personDirectory = directory;
+        this.userProcessContainer = container;
+        this.personDirectory = directory;
     }
 
     /**
@@ -227,6 +226,11 @@ public class CreateJPanel extends javax.swing.JPanel {
         lblHAddress.setText("Home Address");
 
         btnBack.setText("<<Back");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackActionPerformed(evt);
+            }
+        });
 
         lblPersonDetail.setText("Personal Details");
 
@@ -324,9 +328,7 @@ public class CreateJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(3, 3, 3)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnBack))
                 .addGap(47, 47, 47)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -408,13 +410,14 @@ public class CreateJPanel extends javax.swing.JPanel {
                             .addComponent(txtHZip, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lblHZip))
                         .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblHPhone)
-                            .addComponent(txtHPhone, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(txtWPhone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(lblWPhone)
-                                .addComponent(btnSave)))))
+                                .addComponent(btnSave))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(lblHPhone)
+                                .addComponent(txtHPhone, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(447, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -488,27 +491,45 @@ public class CreateJPanel extends javax.swing.JPanel {
         
         Person p = personDirectory.addPerson();
         
-        person.setFirstName(fName);
-        person.setLastName(lName);
-        person.setSex(sex);
-        person.setAge(age);
+        p.setFirstName(fName);
+        p.setLastName(lName);
+        p.setSex(sex);
+        p.setAge(age);
 
-        person.setwAddress1(wAddress1);
-        person.setwAddress2(wAddress2);
-        person.setwCity(wCity);
-        person.setwPhone(wPhone);
-        person.setwState(wState);
-        person.setwZip(wZip);
+        p.setwAddress1(wAddress1);
+        p.setwAddress2(wAddress2);
+        p.setwCity(wCity);
+        p.setwPhone(wPhone);
+        p.setwState(wState);
+        p.setwZip(wZip);
         
-        person.sethAddress1(hAddress1);
-        person.sethAddress2(hAddress2);
-        person.sethCity(hCity);
-        person.sethPhone(hPhone);
-        person.sethState(hState);
-        person.sethZip(hZip);
+        p.sethAddress1(hAddress1);
+        p.sethAddress2(hAddress2);
+        p.sethCity(hCity);
+        p.sethPhone(hPhone);
+        p.sethState(hState);
+        p.sethZip(hZip);
         
         JOptionPane.showMessageDialog(this,"Person Added Successfully!", "Information", JOptionPane.INFORMATION_MESSAGE);
         
+        txtFName.setText("");
+        txtLName.setText("");
+        txtAge.setText("");
+        txtSex.setText("");
+
+        txtWAddressL1.setText("");
+        txtWAddressL2.setText("");
+        txtWCity.setText("");
+        txtWState.setText("");
+        txtWZip.setText("");
+        txtWPhone.setText("");
+        
+        txtHAddressL1.setText("");
+        txtHAddressL2.setText("");
+        txtHCity.setText("");
+        txtHState.setText("");
+        txtHZip.setText("");
+        txtHPhone.setText("");
         
     }//GEN-LAST:event_btnSaveActionPerformed
 
@@ -535,6 +556,13 @@ public class CreateJPanel extends javax.swing.JPanel {
     private void txtHAddressL2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHAddressL2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtHAddressL2ActionPerformed
+
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+        // TODO add your handling code here:
+        userProcessContainer.remove(this);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);
+    }//GEN-LAST:event_btnBackActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

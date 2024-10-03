@@ -188,14 +188,14 @@ public class MainJFrame extends javax.swing.JFrame {
         newPerson2.setwCity("Chelsea");
         newPerson2.setwState("MA");
         newPerson2.setwZip("02150");
-        newPerson2.setwPhone("908880");
+        newPerson2.setwPhone("9088980");
         
         newPerson2.sethAddress1("Geneva St");
         newPerson2.sethAddress2("Room.230");
         newPerson2.sethCity("Malden");
         newPerson2.sethState("MA");
         newPerson2.sethZip("02230");
-        newPerson2.sethPhone("807008");
+        newPerson2.sethPhone("8070083");
         
         Person newPerson3 = personDirectory.addPerson();
         newPerson3.setFirstName("Will");
@@ -208,14 +208,55 @@ public class MainJFrame extends javax.swing.JFrame {
         newPerson3.setwCity("Boston");
         newPerson3.setwState("MA");
         newPerson3.setwZip("02140");
-        newPerson3.setwPhone("617893");
+        newPerson3.setwPhone("6178930");
         
         newPerson3.sethAddress1("Clay St");
         newPerson3.sethAddress2("No.432");
         newPerson3.sethCity("Concord");
         newPerson3.sethState("NH");
         newPerson3.sethZip("03103");
-        newPerson3.sethPhone("8490023");
+        newPerson3.sethPhone("8490032");
+        
+        Person newPerson4 = personDirectory.addPerson();
+        newPerson4.setFirstName("Janet");
+        newPerson4.setLastName("Fritz");
+        newPerson4.setAge("22");
+        newPerson4.setSex("F");
+
+        newPerson4.setwAddress1("Morgan St");
+        newPerson4.setwAddress2("1600");
+        newPerson4.setwCity("Orlando");
+        newPerson4.setwState("FL");
+        newPerson4.setwZip("32789");
+        newPerson4.setwPhone("9000788");
+        
+        newPerson4.sethAddress1("Moore St.");
+        newPerson4.sethAddress2("Room.432");
+        newPerson4.sethCity("Orlando");
+        newPerson4.sethState("FL");
+        newPerson4.sethZip("32789");
+        newPerson4.sethPhone("8223302");
+       
+        Person newPerson5 = personDirectory.addPerson();
+        newPerson5.setFirstName("Jessie");
+        newPerson5.setLastName("Evans");
+        newPerson5.setAge("40");
+        newPerson5.setSex("F");
+
+        newPerson5.setwAddress1("Holly St");
+        newPerson5.setwAddress2("300");
+        newPerson5.setwCity("Boston");
+        newPerson5.setwState("MA");
+        newPerson5.setwZip("02140");
+        newPerson5.setwPhone("3022237");
+        
+        newPerson5.sethAddress1("Leo St");
+        newPerson5.sethAddress2("No.22");
+        newPerson5.sethCity("Boston");
+        newPerson5.sethState("MA");
+        newPerson5.sethZip("02140");
+        newPerson5.sethPhone("3949490");
+        
     }
     
 }

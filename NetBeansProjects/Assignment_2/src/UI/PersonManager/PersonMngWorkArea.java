@@ -7,6 +7,7 @@ package UI.PersonManager;
 import Model.Person;
 import Model.PersonDirectory;
 import java.awt.CardLayout;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 /**
@@ -145,7 +146,7 @@ public class PersonMngWorkArea extends javax.swing.JPanel {
         // TODO add your handling code here:
         CreateJPanel panel = new CreateJPanel(userProcessContainer, personDirectory);
         userProcessContainer.add("CreateJPanel", panel);
-        
+    
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
     }//GEN-LAST:event_createBtnActionPerformed
@@ -161,6 +162,21 @@ public class PersonMngWorkArea extends javax.swing.JPanel {
 
     private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
         // TODO add your handling code here:
+        if(!txtSearch.getText().isBlank()) {
+            String nameSearch = txtSearch.getText();
+            Person foundAcc = personDirectory.searchPerson(nameSearch);
+            
+            if(foundAcc != null) {
+                ViewPersonJPanel panel = new ViewPersonJPanel(userProcessContainer, personDirectory, foundAcc);
+                userProcessContainer.add("ViewAccountJPanel", panel);
+                CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+                layout.next(userProcessContainer);
+            } else {
+                JOptionPane.showMessageDialog(null, "Account Not Found. Please Try Again.", "Warning", JOptionPane.WARNING_MESSAGE);
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Please Type the Account Number to View.", "Warning", JOptionPane.WARNING_MESSAGE);
+        }
     }//GEN-LAST:event_btnSearchActionPerformed
 
     private void txtSearchFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtSearchFocusGained

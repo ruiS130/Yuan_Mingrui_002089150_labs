@@ -26,13 +26,13 @@ public class PersonDirectory {
     }
     
     public Person addPerson() {
-        Person acc = new Person();
-        personList.add(acc);
-        return acc;
+        Person p = new Person();
+        personList.add(p);
+        return p;
     }
     
-    public void deletePerson(Person person) {
-        personList.remove(person);
+    public void deletePerson(Person personX) {
+        personList.remove(personX);
     }
     
     public Person searchPerson(String fName) {
