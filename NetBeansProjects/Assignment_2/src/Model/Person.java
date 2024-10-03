@@ -12,22 +12,8 @@ public class Person {
 
     String FirstName;
     String LastName;
-    String Email;
-    String Phone;
-    String dLicenseNum;
-    String dLicenseState;
-    String socialSNum;
-    String City;
-    String ZIP;
-    String teleNum;
-    String faxNum;
     String sex;
     String age;
-    
-    String mStat;
-    String language;
-    String perWeb;
-    String conOrigin;
     
     String wAddress1;
     String wAddress2;
@@ -57,110 +43,6 @@ public class Person {
 
     public void setLastName(String LastName) {
         this.LastName = LastName;
-    }
-
-    public String getEmail() {
-        return Email;
-    }
-
-    public void setEmail(String Email) {
-        this.Email = Email;
-    }
-
-    public String getPhone() {
-        return Phone;
-    }
-
-    public void setPhone(String Phone) {
-        this.Phone = Phone;
-    }
-
-    public String getdLicenseNum() {
-        return dLicenseNum;
-    }
-
-    public void setdLicenseNum(String dLicenseNum) {
-        this.dLicenseNum = dLicenseNum;
-    }
-
-    public String getdLicenseState() {
-        return dLicenseState;
-    }
-
-    public void setdLicenseState(String dLicenseState) {
-        this.dLicenseState = dLicenseState;
-    }
-
-    public String getSocialSNum() {
-        return socialSNum;
-    }
-
-    public void setSocialSNum(String socialSNum) {
-        this.socialSNum = socialSNum;
-    }
-
-    public String getCity() {
-        return City;
-    }
-
-    public void setCity(String City) {
-        this.City = City;
-    }
-
-    public String getZIP() {
-        return ZIP;
-    }
-
-    public void setZIP(String ZIP) {
-        this.ZIP = ZIP;
-    }
-
-    public String getTeleNum() {
-        return teleNum;
-    }
-
-    public void setTeleNum(String teleNum) {
-        this.teleNum = teleNum;
-    }
-
-    public String getFaxNum() {
-        return faxNum;
-    }
-
-    public void setFaxNum(String faxNum) {
-        this.faxNum = faxNum;
-    }
-
-    public String getmStat() {
-        return mStat;
-    }
-
-    public void setmStat(String mStat) {
-        this.mStat = mStat;
-    }
-
-    public String getLanguage() {
-        return language;
-    }
-
-    public void setLanguage(String language) {
-        this.language = language;
-    }
-
-    public String getPerWeb() {
-        return perWeb;
-    }
-
-    public void setPerWeb(String perWeb) {
-        this.perWeb = perWeb;
-    }
-
-    public String getConOrigin() {
-        return conOrigin;
-    }
-
-    public void setConOrigin(String conOrigin) {
-        this.conOrigin = conOrigin;
     }
 
     public String getwAddress1() {
