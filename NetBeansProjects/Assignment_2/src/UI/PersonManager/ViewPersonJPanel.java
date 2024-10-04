@@ -414,8 +414,12 @@ public class ViewPersonJPanel extends javax.swing.JPanel {
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
         userProcessContainer.remove(this);
+        
+        PersonMngWorkArea panel = new PersonMngWorkArea(userProcessContainer, personDirectory);
+        userProcessContainer.add("PersonMngWorkArea", panel);
+        
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.previous(userProcessContainer);
+        layout.show(userProcessContainer, "PersonMngWorkArea");
     }//GEN-LAST:event_btnBackActionPerformed
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed

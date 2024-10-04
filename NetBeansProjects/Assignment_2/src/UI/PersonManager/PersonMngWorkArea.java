@@ -168,7 +168,7 @@ public class PersonMngWorkArea extends javax.swing.JPanel {
             
             if(foundAcc != null) {
                 ViewPersonJPanel panel = new ViewPersonJPanel(userProcessContainer, personDirectory, foundAcc);
-                userProcessContainer.add("ViewAccountJPanel", panel);
+                userProcessContainer.add("ViewPersonJPanel", panel);
                 CardLayout layout = (CardLayout) userProcessContainer.getLayout();
                 layout.next(userProcessContainer);
             } else {
@@ -181,16 +181,16 @@ public class PersonMngWorkArea extends javax.swing.JPanel {
 
     private void txtSearchFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtSearchFocusGained
         // TODO add your handling code here:
-//        if (txtSearch.getText().equals("Enter your text here")) {
-//            txtSearch.setText("");
-//        }
+        if (txtSearch.getText().equals("Enter your text here")) {
+            txtSearch.setText("");
+        }
     }//GEN-LAST:event_txtSearchFocusGained
 
     private void txtSearchFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtSearchFocusLost
         // TODO add your handling code here:
-//        if (txtSearch.getText().isEmpty()) {
-//            txtSearch.setText("Enter your text here");
-//        }
+        if (txtSearch.getText().isEmpty()) {
+            txtSearch.setText("Enter your text here");
+        }
     }//GEN-LAST:event_txtSearchFocusLost
 
     private void txtSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSearchActionPerformed

@@ -4,10 +4,13 @@
  */
 package UI.PersonManager;
 
+import java.util.*;
 import Model.Person;
 import Model.PersonDirectory;
-import java.awt.*;
-import javax.swing.*;
+import java.awt.CardLayout;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -141,8 +144,12 @@ public class ManagePersonJPanel extends javax.swing.JPanel {
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
         userProcessContainer.remove(this);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.previous(userProcessContainer);
+        
+        PersonMngWorkArea panel = new PersonMngWorkArea(userProcessContainer, personDirectory);
+        userProcessContainer.add("PersonMngWorkArea", panel);
+        
+       CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+       layout.show(userProcessContainer, "PersonMngWorkArea");
     }//GEN-LAST:event_btnBackActionPerformed
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
@@ -224,7 +231,7 @@ public class ManagePersonJPanel extends javax.swing.JPanel {
         for(Person p : personDirectory.getPerson()) {
             
             Object[] row = new Object[16];
-            row[0] = p.getFirstName();
+            row[0] = p;
             row[1] = p.getLastName();
             row[2] = p.getAge();
             row[3] = p.getSex();

@@ -43,7 +43,6 @@ public class MainJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(0, 0));
-        setPreferredSize(new java.awt.Dimension(1900, 1000));
         setSize(new java.awt.Dimension(1900, 1000));
 
         jSplitPane1.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
