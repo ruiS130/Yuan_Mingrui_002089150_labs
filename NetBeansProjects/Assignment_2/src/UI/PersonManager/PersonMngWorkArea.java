@@ -50,6 +50,9 @@ public class PersonMngWorkArea extends javax.swing.JPanel {
 
         splitPane.setPreferredSize(new java.awt.Dimension(1147, 726));
 
+        controlPanel.setBackground(new java.awt.Color(173, 216, 230));
+
+        createBtn.setFont(new java.awt.Font("Apple LiGothic", 0, 15)); // NOI18N
         createBtn.setText("Add Person");
         createBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -57,6 +60,7 @@ public class PersonMngWorkArea extends javax.swing.JPanel {
             }
         });
 
+        viewBtn.setFont(new java.awt.Font("Apple LiGothic", 0, 15)); // NOI18N
         viewBtn.setText("View Person");
         viewBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -121,6 +125,7 @@ public class PersonMngWorkArea extends javax.swing.JPanel {
 
         splitPane.setLeftComponent(controlPanel);
 
+        workArea.setBackground(new java.awt.Color(240, 255, 255));
         workArea.setMinimumSize(new java.awt.Dimension(1500, 900));
         workArea.setRequestFocusEnabled(false);
         workArea.setLayout(new java.awt.CardLayout());

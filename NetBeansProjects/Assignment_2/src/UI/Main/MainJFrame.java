@@ -47,6 +47,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
         jSplitPane1.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
+        topJPanel.setBackground(new java.awt.Color(135, 206, 235));
         topJPanel.setPreferredSize(new java.awt.Dimension(1900, 1000));
         topJPanel.setSize(new java.awt.Dimension(1900, 1000));
 
@@ -82,9 +83,10 @@ public class MainJFrame extends javax.swing.JFrame {
 
         jSplitPane1.setTopComponent(topJPanel);
 
+        userProcessContainer.setBackground(new java.awt.Color(240, 255, 255));
         userProcessContainer.setMinimumSize(new java.awt.Dimension(1200, 800));
-        userProcessContainer.setPreferredSize(new java.awt.Dimension(1200, 800));
-        userProcessContainer.setSize(new java.awt.Dimension(1200, 800));
+        userProcessContainer.setPreferredSize(new java.awt.Dimension(1200, 900));
+        userProcessContainer.setSize(new java.awt.Dimension(1200, 900));
         userProcessContainer.setLayout(new java.awt.CardLayout());
         jSplitPane1.setRightComponent(userProcessContainer);
 

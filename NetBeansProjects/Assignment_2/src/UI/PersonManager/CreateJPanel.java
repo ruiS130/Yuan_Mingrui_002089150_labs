@@ -79,74 +79,92 @@ public class CreateJPanel extends javax.swing.JPanel {
         jSeparator2 = new javax.swing.JSeparator();
         lblPersonDetail = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(240, 255, 255));
         setMinimumSize(new java.awt.Dimension(1900, 800));
         setPreferredSize(new java.awt.Dimension(1900, 800));
         setSize(new java.awt.Dimension(1900, 800));
 
+        txtFName.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         txtFName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtFNameActionPerformed(evt);
             }
         });
 
+        lblFName.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         lblFName.setText("First Name");
 
+        txtLName.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         txtLName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtLNameActionPerformed(evt);
             }
         });
 
+        lblLName.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         lblLName.setText("Last Name");
 
+        lblWAddressL1.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         lblWAddressL1.setText("Address Line 1");
 
+        txtWAddressL1.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         txtWAddressL1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtWAddressL1ActionPerformed(evt);
             }
         });
 
+        lblAge.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         lblAge.setText("Age");
 
+        txtWAddressL2.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         txtWAddressL2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtWAddressL2ActionPerformed(evt);
             }
         });
 
+        lblWAddressL2.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         lblWAddressL2.setText("Address Line 2");
 
+        txtWCity.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         txtWCity.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtWCityActionPerformed(evt);
             }
         });
 
+        lblSex.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         lblSex.setText("Sex");
 
+        lblWCity.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         lblWCity.setText("City");
 
+        txtSex.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         txtSex.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtSexActionPerformed(evt);
             }
         });
 
+        txtWState.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         txtWState.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtWStateActionPerformed(evt);
             }
         });
 
+        lblWState.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         lblWState.setText("State");
 
+        txtWZip.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         txtWZip.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtWZipActionPerformed(evt);
             }
         });
 
+        lblWZip.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         lblWZip.setText("ZIP");
 
         txtWPhone.addActionListener(new java.awt.event.ActionListener() {
@@ -155,17 +173,20 @@ public class CreateJPanel extends javax.swing.JPanel {
             }
         });
 
+        lblWPhone.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         lblWPhone.setText("Work Phone Number");
 
+        txtAge.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         txtAge.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtAgeActionPerformed(evt);
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Toppan Bunkyu Midashi Gothic", 0, 20)); // NOI18N
         jLabel1.setText("Person Profile");
 
+        btnSave.setFont(new java.awt.Font("Apple LiGothic", 0, 16)); // NOI18N
         btnSave.setText("Save");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -173,8 +194,10 @@ public class CreateJPanel extends javax.swing.JPanel {
             }
         });
 
+        lblWAddress.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         lblWAddress.setText("Work Address");
 
+        lblHAddressL2.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         lblHAddressL2.setText("Address Line 2");
 
         txtHCity.addActionListener(new java.awt.event.ActionListener() {
@@ -183,6 +206,7 @@ public class CreateJPanel extends javax.swing.JPanel {
             }
         });
 
+        lblHCity.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         lblHCity.setText("City");
 
         txtHState.addActionListener(new java.awt.event.ActionListener() {
@@ -191,6 +215,7 @@ public class CreateJPanel extends javax.swing.JPanel {
             }
         });
 
+        lblHState.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         lblHState.setText("State");
 
         txtHZip.addActionListener(new java.awt.event.ActionListener() {
@@ -199,6 +224,7 @@ public class CreateJPanel extends javax.swing.JPanel {
             }
         });
 
+        lblHZip.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         lblHZip.setText("ZIP");
 
         txtHPhone.addActionListener(new java.awt.event.ActionListener() {
@@ -207,8 +233,10 @@ public class CreateJPanel extends javax.swing.JPanel {
             }
         });
 
+        lblHPhone.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         lblHPhone.setText("Home Phone Number");
 
+        lblHAddressL1.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         lblHAddressL1.setText("Address Line 1");
 
         txtHAddressL1.addActionListener(new java.awt.event.ActionListener() {
@@ -223,8 +251,10 @@ public class CreateJPanel extends javax.swing.JPanel {
             }
         });
 
+        lblHAddress.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         lblHAddress.setText("Home Address");
 
+        btnBack.setFont(new java.awt.Font("Apple LiGothic", 0, 15)); // NOI18N
         btnBack.setText("<<Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -232,6 +262,7 @@ public class CreateJPanel extends javax.swing.JPanel {
             }
         });
 
+        lblPersonDetail.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         lblPersonDetail.setText("Personal Details");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -267,14 +298,14 @@ public class CreateJPanel extends javax.swing.JPanel {
                                     .addGap(18, 18, 18)
                                     .addComponent(txtFName, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(btnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(150, 150, 150)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
+                                .addGap(144, 144, 144)
                                 .addComponent(lblWPhone)
                                 .addGap(18, 18, 18)
                                 .addComponent(txtWPhone, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(10, 10, 10)
+                                .addGap(160, 160, 160)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(lblWAddress, javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -296,7 +327,7 @@ public class CreateJPanel extends javax.swing.JPanel {
                                             .addComponent(txtWCity, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(txtWZip, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                     .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(152, 152, 152)
+                        .addGap(157, 157, 157)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -326,11 +357,15 @@ public class CreateJPanel extends javax.swing.JPanel {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(3, 3, 3)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnBack))
-                .addGap(47, 47, 47)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(btnBack)
+                        .addGap(47, 47, 47))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel1)
+                        .addGap(18, 18, 18)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

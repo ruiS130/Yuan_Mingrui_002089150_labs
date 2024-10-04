@@ -49,11 +49,13 @@ public class ManagePersonJPanel extends javax.swing.JPanel {
         btnDelete = new javax.swing.JButton();
         btnDetail = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(240, 255, 255));
         setMinimumSize(new java.awt.Dimension(1200, 800));
         setPreferredSize(new java.awt.Dimension(1200, 800));
         setRequestFocusEnabled(false);
         setSize(new java.awt.Dimension(1200, 800));
 
+        tblPerson.setFont(new java.awt.Font("Apple LiGothic", 0, 14)); // NOI18N
         tblPerson.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},
@@ -89,6 +91,7 @@ public class ManagePersonJPanel extends javax.swing.JPanel {
             tblPerson.getColumnModel().getColumn(14).setPreferredWidth(65);
         }
 
+        btnBack.setFont(new java.awt.Font("Apple LiGothic", 0, 15)); // NOI18N
         btnBack.setText("<<Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -96,6 +99,7 @@ public class ManagePersonJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnDelete.setFont(new java.awt.Font("Apple LiGothic", 0, 16)); // NOI18N
         btnDelete.setText("Delete Person");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -103,6 +107,7 @@ public class ManagePersonJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnDetail.setFont(new java.awt.Font("Apple LiGothic", 0, 16)); // NOI18N
         btnDetail.setText("View Detail");
         btnDetail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,7 +142,7 @@ public class ManagePersonJPanel extends javax.swing.JPanel {
                 .addComponent(btnDelete)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnDetail)
-                .addContainerGap(454, Short.MAX_VALUE))
+                .addContainerGap(455, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
