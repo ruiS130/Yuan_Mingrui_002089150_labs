@@ -528,20 +528,20 @@ public class CreateJPanel extends javax.swing.JPanel {
         
         p.setFirstName(fName);
         p.setLastName(lName);
-        p.setSex(sex);
-        p.setAge(age);
+        p.setSex(sex.charAt(0));
+        p.setAge(Short.valueOf(age));
 
         p.setwAddress1(wAddress1);
         p.setwAddress2(wAddress2);
         p.setwCity(wCity);
-        p.setwPhone(wPhone);
+        p.setwPhone((Integer.parseInt(wPhone)));
         p.setwState(wState);
         p.setwZip(wZip);
         
         p.sethAddress1(hAddress1);
         p.sethAddress2(hAddress2);
         p.sethCity(hCity);
-        p.sethPhone(hPhone);
+        p.sethPhone((Integer.parseInt(hPhone)));
         p.sethState(hState);
         p.sethZip(hZip);
         

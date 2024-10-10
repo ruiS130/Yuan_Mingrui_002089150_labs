@@ -12,22 +12,22 @@ public class Person {
 
     String FirstName;
     String LastName;
-    String sex;
-    String age;
+    Character sex;
+    Short age;
     
     String wAddress1;
     String wAddress2;
     String wCity;
     String wState;
     String wZip;
-    String wPhone;
+    Integer wPhone;
     
     String hAddress1;
     String hAddress2;
     String hCity;
     String hState;
     String hZip;
-    String hPhone;
+    Integer hPhone;
 
     public String getFirstName() {
         return FirstName;
@@ -85,11 +85,11 @@ public class Person {
         this.wZip = wZip;
     }
 
-    public String getwPhone() {
+    public Integer getwPhone() {
         return wPhone;
     }
 
-    public void setwPhone(String wPhone) {
+    public void setwPhone(Integer wPhone) {
         this.wPhone = wPhone;
     }
 
@@ -133,27 +133,27 @@ public class Person {
         this.hZip = hZip;
     }
 
-    public String gethPhone() {
+    public Integer gethPhone() {
         return hPhone;
     }
 
-    public void sethPhone(String hPhone) {
+    public void sethPhone(Integer hPhone) {
         this.hPhone = hPhone;
     }
 
-    public String getSex() {
+    public char getSex() {
         return sex;
     }
 
-    public void setSex(String sex) {
+    public void setSex(char sex) {
         this.sex = sex;
     }
 
-    public String getAge() {
+    public Short getAge() {
         return age;
     }
 
-    public void setAge(String age) {
+    public void setAge(Short age) {
         this.age = age;
     }
     

@@ -479,11 +479,12 @@ public class ViewPersonJPanel extends javax.swing.JPanel {
                             .addComponent(txtWZip, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lblWZip))
                         .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtWPhone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblWPhone)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnUpdate)
-                            .addComponent(btnSave))))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(txtWPhone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lblWPhone)
+                                .addComponent(btnSave)))))
                 .addGap(574, 574, 574))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -530,20 +531,20 @@ public class ViewPersonJPanel extends javax.swing.JPanel {
 
         person.setFirstName(fName);
         person.setLastName(lName);
-        person.setSex(sex);
-        person.setAge(age);
+        person.setSex(sex.charAt(0));
+        person.setAge(Short.valueOf(age));
 
         person.setwAddress1(wAddress1);
         person.setwAddress2(wAddress2);
         person.setwCity(wCity);
-        person.setwPhone(wPhone);
+        person.setwPhone(Integer.parseInt(wPhone));
         person.setwState(wState);
         person.setwZip(wZip);
         
         person.sethAddress1(hAddress1);
         person.sethAddress2(hAddress2);
         person.sethCity(hCity);
-        person.sethPhone(hPhone);
+        person.sethPhone(Integer.parseInt(hPhone));
         person.sethState(hState);
         person.sethZip(hZip);
 
@@ -669,22 +670,22 @@ public class ViewPersonJPanel extends javax.swing.JPanel {
     private void refreshTextFields() {
         txtFName.setText(person.getFirstName());
         txtLName.setText(person.getLastName());
-        txtAge.setText(person.getAge());
-        txtSex.setText(person.getSex());
+        txtAge.setText(Integer.toString(person.getAge()));
+        txtSex.setText(String.valueOf(person.getSex()));
 
         txtWAddressL1.setText(person.getwAddress1());
         txtWAddressL2.setText(person.getwAddress2());
         txtWCity.setText(person.getwCity());
         txtWState.setText(person.getwState());
         txtWZip.setText(person.getwZip());
-        txtWPhone.setText(person.getwPhone());
+        txtWPhone.setText(Double.toString(person.getwPhone()));
         
         txtHAddressL1.setText(person.gethAddress1());
         txtHAddressL2.setText(person.gethAddress2());
         txtHCity.setText(person.gethCity());
         txtHState.setText(person.gethState());
         txtHZip.setText(person.gethZip());
-        txtHPhone.setText(person.gethPhone());
+        txtHPhone.setText(Double.toString(person.gethPhone()));
     }
 
     private void setViewMode() {
