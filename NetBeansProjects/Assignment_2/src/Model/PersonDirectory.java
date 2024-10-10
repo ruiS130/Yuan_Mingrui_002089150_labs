@@ -37,7 +37,7 @@ public class PersonDirectory {
     
     public Person searchPerson(String fName) {
         for(Person a : personList) {
-            if(a.getFirstName().contains(fName)) {
+            if(a.getFirstName().contains(fName) || a.getLastName().contains(fName) || a.getwAddress1().contains(fName) || a.gethAddress1().contains(fName)) {
                 return a;
             }
         }
