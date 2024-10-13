@@ -18,7 +18,7 @@ public class Product {
     
     private ArrayList<Feature> features;
 
-    private static int count = 0;
+    private static int count = -3;
     
     public Product() {
         count++;
@@ -62,7 +62,9 @@ public class Product {
     }
 
     public Feature addNewFeature() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        Feature newFeature = new Feature(this);
+        this.getFeatures().add(newFeature);
+        return newFeature;
     }
     
 }

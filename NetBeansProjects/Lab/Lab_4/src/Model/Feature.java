@@ -35,16 +35,18 @@ public class Feature {
         return name;
     }
 
-    public void setName(String name) {
+    public Feature setName(String name) {
         this.name = name;
+        return this;
     }
 
     public Object getValue() {
         return value;
     }
 
-    public void setValue(Object value) {
+    public Feature setValue(Object value) {
         this.value = value;
+        return this;
     }
     
     @Override
