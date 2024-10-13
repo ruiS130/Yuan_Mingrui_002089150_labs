@@ -11,7 +11,7 @@ import Model.SupplierDirectory;
 
 /**
  *
- * @author archil
+ * @author ruirui
  */
 public class MainJFrame extends javax.swing.JFrame {
 
@@ -27,7 +27,7 @@ public class MainJFrame extends javax.swing.JFrame {
         setSize(800,600);
         setResizable(false);
        
-        
+        populateDemoData();
         setLoginScreen();
     
     }
@@ -97,9 +97,18 @@ public class MainJFrame extends javax.swing.JFrame {
     }
 
     private void setLoginScreen() {
+        
+        LoginScreen ls = new LoginScreen(mainWorkArea, supplierDirectory);
+        mainWorkArea.add("LoginScreen", ls);
+        CardLayout layout = (CardLayout) mainWorkArea.getLayout();
+        layout.next(mainWorkArea);
 
-       
-
+    }
+    
+    private void populateDemoData() {
+        
+        Supplier bestBuy = supplierDirectory.addSupplier();
+        bestBuy.setSupplyName("Best Buy");
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

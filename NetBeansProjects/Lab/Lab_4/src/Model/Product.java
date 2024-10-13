@@ -8,13 +8,15 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Rushabh
+ * @author ruirui
  */
 public class Product {
     
     private String name;
     private int price;
     private int id;
+    
+    private ArrayList<Feature> features;
 
     private static int count = 0;
     
@@ -22,6 +24,7 @@ public class Product {
         count++;
         id = count;
         
+        features = new ArrayList<Feature>();
     }
 
     public String getName() {
@@ -45,10 +48,22 @@ public class Product {
         this.price = price;
     }
 
+    public ArrayList<Feature> getFeatures() {
+        return features;
+    }
+
+    public void setFeatures(ArrayList<Feature> features) {
+        this.features = features;
+    }
+
     
     @Override
     public String toString() {
         return name;
+    }
+
+    public Feature addNewFeature() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
 }

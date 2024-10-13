@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Rushabh
+ * @author ruirui
  */
 public class ProductCatalog {
     

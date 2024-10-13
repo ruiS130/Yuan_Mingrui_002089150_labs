@@ -31,7 +31,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 
 /**
  *
- * @author Rushabh
+ * @author ruirui
  */
 public class AddSupplier extends javax.swing.JPanel {
 
@@ -47,7 +47,12 @@ public class AddSupplier extends javax.swing.JPanel {
         this.workArea = workArea;
         this.supplierDirectory = supplierDirectory;
         
-    
+        FileFilter jpegFilter = new FileNameExtensionFilter("JPEG file", "jpg", "jpg");
+        FileFilter pngFilter = new FileNameExtensionFilter("PNG file", "png", "png");
+
+        fileChooser.addChoosableFileFilter(jpegFilter);
+        fileChooser.addChoosableFileFilter(pngFilter);
+        fileChooser.setFileFilter(pngFilter);
     }
 
     /** This method is called from within the constructor to
@@ -200,15 +205,30 @@ public class AddSupplier extends javax.swing.JPanel {
 
     private void btnAttachActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAttachActionPerformed
         // TODO add your handling code here:
+        int returnVal = fileChooser.showOpenDialog(this);
         
+        if(returnVal == JFileChooser.APPROVE_OPTION) {
+            File file = fileChooser.getSelectedFile();
+            URL url;
+            
+            try{
+                url = file.toURI().toURL();
+                logoImage = new ImageIcon(url);
+                logoImage = new ImageIcon(logoImage.getImage().getScaledInstance(150, 150, Image.SCALE_SMOOTH));
+
+                imgLogo.setIcon(logoImage);
+                
+            } catch (MalformedURLException ex){
+                Logger.getLogger(this.getName()).log(Level.SEVERE, null ,ex);
+            }
+        } 
         
     }//GEN-LAST:event_btnAttachActionPerformed
 
     private void btnRemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoveActionPerformed
         // TODO add your handling code here:
-        
-  
-        
+        logoImage = null;
+        imgLogo.setIcon(logoImage);
     }//GEN-LAST:event_btnRemoveActionPerformed
 
       

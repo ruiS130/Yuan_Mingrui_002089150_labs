@@ -15,14 +15,13 @@ import UI.supplier.SupplierWorkAreaJPanel;
 
 /**
  *
- * @author archil
+ * @author ruirui
  */
 public class LoginScreen extends javax.swing.JPanel {
 
     JPanel mainWorkArea;
     SupplierDirectory supplierDirectory;
     Supplier selectedSupplier = null;
-    
     
     /**
      * Creates new form LoginScreen
@@ -128,14 +127,28 @@ public class LoginScreen extends javax.swing.JPanel {
     private void cmbSuppliersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbSuppliersActionPerformed
         // TODO add your handling code here:
         
-        
+        if(cmbSuppliers.getSelectedItem() == null) return;
+        selectedSupplier = (Supplier) cmbSuppliers.getSelectedItem();
         
     }//GEN-LAST:event_cmbSuppliersActionPerformed
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         // TODO add your handling code here:
         
+        JPanel selectedPanel = (JPanel) cmbRoles.getSelectedItem();
         
+        if(selectedPanel.getClass() == SupplierWorkAreaJPanel.class) {
+            if(selectedSupplier == null) {
+                JOptionPane.showMessageDialog(this, "Please select a supplier to login!");
+                return;
+            } else {
+                selectedPanel = new SupplierWorkAreaJPanel(mainWorkArea, selectedSupplier);
+            }
+        }
+        
+        mainWorkArea.add("WorkAreaJPanel", selectedPanel);
+        CardLayout layout = (CardLayout) mainWorkArea.getLayout();
+        layout.next(mainWorkArea);
         
     }//GEN-LAST:event_btnLoginActionPerformed
 
@@ -156,19 +169,41 @@ public class LoginScreen extends javax.swing.JPanel {
 
     private void populateRoleCombo() {
         
-      
+        cmbRoles.removeAllItems();
+
+        AdminWorkAreaJPanel adminPanel = new AdminWorkAreaJPanel(mainWorkArea, supplierDirectory);
+        SupplierWorkAreaJPanel supplierPanel = new SupplierWorkAreaJPanel(mainWorkArea, selectedSupplier);
+
+        cmbRoles.addItem(adminPanel);
+        cmbRoles.addItem(supplierPanel);
 
     }
 
     public void populateSupplierCombo() {
        
-     
+        cmbSuppliers.removeAllItems();
+        
+        for(Supplier supplier: supplierDirectory.getSupplierList()) {
+            cmbSuppliers.addItem(supplier);
+        }
        
     }
 
     private void updateSupplierVisibility() {
         
+        if((cmbRoles.getSelectedItem() == null) || (cmbRoles.getSelectedItem().getClass() == AdminWorkAreaJPanel.class)) {
+            selectedSupplier = null;
+            lblSupplier.setVisible(false);
+            cmbSuppliers.setVisible(false);
+            return;
+        }
         
-         //To change body of generated methods, choose Tools | Templates.
+        if(cmbRoles.getSelectedItem().getClass() == SupplierWorkAreaJPanel.class) {
+            lblSupplier.setVisible(true);
+            cmbRoles.setVisible(true);
+            cmbSuppliers.setVisible(true);
+            return;
+        }
+        
     }
 }

@@ -13,7 +13,7 @@ import UI.LoginScreen;
 
 /**
  *
- * @author Rushabh
+ * @author ruirui
  */
 public class SupplierWorkAreaJPanel extends javax.swing.JPanel {
 
