@@ -39,7 +39,6 @@ public class Product {
         return id;
     }
     
-    
     public int getPrice() {
         return price;
     }

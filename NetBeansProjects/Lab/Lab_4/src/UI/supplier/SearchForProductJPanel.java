@@ -8,6 +8,7 @@ package UI.supplier;
 import Model.Product;
 import Model.Supplier;
 import java.awt.CardLayout;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 
@@ -103,7 +104,21 @@ public class SearchForProductJPanel extends javax.swing.JPanel {
 
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
         // TODO add your handling code here:
-        
+        if(!idField.getText().isBlank()) {
+            String idSearch = idField.getText();
+            Product prod = supplier.getProductCatalog().searchProduct(Integer.parseInt(idSearch));
+            
+            if(prod != null) {
+                ViewProductDetailJPanel panel = new ViewProductDetailJPanel(workArea, prod);
+                workArea.add("ViewProductDetailJPanel", panel);
+                CardLayout layout = (CardLayout) workArea.getLayout();
+                layout.next(workArea);
+            } else {
+                JOptionPane.showMessageDialog(null, "Account Not Found. Please Try Again.", "Warning", JOptionPane.WARNING_MESSAGE);
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Please Type the Account Number to View.", "Warning", JOptionPane.WARNING_MESSAGE);
+        }
         
 }//GEN-LAST:event_searchButtonActionPerformed
 

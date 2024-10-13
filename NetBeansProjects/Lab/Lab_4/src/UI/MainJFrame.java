@@ -5,6 +5,7 @@
  */
 package UI;
 
+import Model.ProductCatalog;
 import java.awt.CardLayout;
 import Model.Supplier;
 import Model.SupplierDirectory;
@@ -16,6 +17,7 @@ import Model.SupplierDirectory;
 public class MainJFrame extends javax.swing.JFrame {
 
     SupplierDirectory supplierDirectory;
+    ProductCatalog productCatalog;
     
     /**
      * Creates new form MainJFrame
@@ -24,6 +26,7 @@ public class MainJFrame extends javax.swing.JFrame {
         initComponents();
         
         supplierDirectory = new SupplierDirectory();
+        productCatalog = new ProductCatalog();
         setSize(800,600);
         setResizable(false);
        
@@ -44,6 +47,8 @@ public class MainJFrame extends javax.swing.JFrame {
         mainWorkArea = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(200, 200));
+        setPreferredSize(new java.awt.Dimension(200, 200));
 
         mainWorkArea.setLayout(new java.awt.CardLayout());
 
