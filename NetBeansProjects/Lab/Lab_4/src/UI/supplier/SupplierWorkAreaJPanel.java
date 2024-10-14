@@ -11,6 +11,7 @@ import java.awt.CardLayout;
 import java.awt.Component;
 import javax.swing.JPanel;
 import UI.LoginScreen;
+import UI.admin.ManageSuppliers;
 import javax.swing.JOptionPane;
 
 /**
@@ -27,12 +28,12 @@ public class SupplierWorkAreaJPanel extends javax.swing.JPanel {
     /**
      * Creates new form ProductManagerWorkAreaJPanel
      */
-    public SupplierWorkAreaJPanel(JPanel mainWorkArea, Supplier supplier) {
+    public SupplierWorkAreaJPanel(JPanel mainWorkArea, Supplier supplier, SupplierDirectory sd) {
 
         initComponents();
         this.mainWorkArea = mainWorkArea;
         this.supplier = supplier;
-        this.supplierDirectory = supplierDirectory;
+        this.supplierDirectory = sd;
         
         btnSupplierProfile.setEnabled(true);
 
@@ -160,14 +161,12 @@ public class SupplierWorkAreaJPanel extends javax.swing.JPanel {
 
     private void btnSupplierProfileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSupplierProfileActionPerformed
         // TODO add your handling code here:
-        if(supplierDirectory != null) {
-            UpdateSuppJPanel usjp = new UpdateSuppJPanel(workArea, supplierDirectory);
-            workArea.add("UpdateSuppJPanel", usjp);
-            CardLayout layout = (CardLayout) workArea.getLayout();
-            layout.show(workArea, "UpdateSuppJPanel");
-        } else {
-            JOptionPane.showMessageDialog(this, "SupplierDirectory is null.", "Warning", JOptionPane.WARNING_MESSAGE);
-        }
+        
+        UpdateSuppJPanel usjp = new UpdateSuppJPanel(workArea, supplierDirectory);
+        workArea.add("UpdateSuppJPanel", usjp);
+        CardLayout layout = (CardLayout) workArea.getLayout();
+        layout.show(workArea, "UpdateSuppJPanel");
+        
     }//GEN-LAST:event_btnSupplierProfileActionPerformed
 
     private void btnLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogOutActionPerformed

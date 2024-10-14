@@ -161,7 +161,7 @@ public class ViewProductDetailJPanel extends javax.swing.JPanel {
             }
         });
 
-        lblLogo.setText("Logo:");
+        lblLogo.setText("Image:");
 
         imgLogo.setText("<No Image>");
         imgLogo.setVerticalAlignment(javax.swing.SwingConstants.TOP);

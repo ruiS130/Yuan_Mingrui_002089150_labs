@@ -53,19 +53,12 @@ public class UpdateSuppJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnAdd = new javax.swing.JButton();
         lblSupplierList = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblSuppliers = new javax.swing.JTable();
         btnRemove = new javax.swing.JButton();
         btnView = new javax.swing.JButton();
-
-        btnAdd.setText("Add Supplier");
-        btnAdd.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAddActionPerformed(evt);
-            }
-        });
+        btnEditSupp = new javax.swing.JButton();
 
         lblSupplierList.setText("Manage Suppliers:");
 
@@ -106,6 +99,13 @@ public class UpdateSuppJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnEditSupp.setText("Edit Supplier");
+        btnEditSupp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditSuppActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -116,9 +116,9 @@ public class UpdateSuppJPanel extends javax.swing.JPanel {
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 708, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblSupplierList)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnAdd)
-                        .addGap(18, 18, 18)
                         .addComponent(btnView)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnEditSupp)
                         .addGap(18, 18, 18)
                         .addComponent(btnRemove)))
                 .addContainerGap(31, Short.MAX_VALUE))
@@ -132,17 +132,12 @@ public class UpdateSuppJPanel extends javax.swing.JPanel {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(14, 14, 14)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAdd)
                     .addComponent(btnView)
+                    .addComponent(btnEditSupp)
                     .addComponent(btnRemove))
                 .addContainerGap(132, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_btnAddActionPerformed
 
     private void btnRemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoveActionPerformed
         // TODO add your handling code here:
@@ -172,9 +167,26 @@ public class UpdateSuppJPanel extends javax.swing.JPanel {
         layout.next(userProcessContainer);
     }//GEN-LAST:event_btnViewActionPerformed
 
+    private void btnEditSuppActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditSuppActionPerformed
+        // TODO add your handling code here:
+        int row = tblSuppliers.getSelectedRow();
+        
+        if(row < 0) {
+            JOptionPane.showMessageDialog(null, "Please select a row!", "Warning", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        
+        Supplier selectedSupplier = (Supplier)tblSuppliers.getValueAt(row, 0);
+        
+        EditSuppJPanel esjp = new EditSuppJPanel(userProcessContainer, supplierDirectory, selectedSupplier);
+        userProcessContainer.add("EditSuppJPanel", esjp);
+        CardLayout layout = (CardLayout)userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_btnEditSuppActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAdd;
+    private javax.swing.JButton btnEditSupp;
     private javax.swing.JButton btnRemove;
     private javax.swing.JButton btnView;
     private javax.swing.JScrollPane jScrollPane1;

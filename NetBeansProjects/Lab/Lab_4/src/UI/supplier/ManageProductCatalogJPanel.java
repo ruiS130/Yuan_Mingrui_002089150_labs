@@ -10,6 +10,8 @@ import Model.ProductCatalog;
 import Model.Supplier;
 import UI.LoginScreen;
 import java.awt.CardLayout;
+import java.awt.Image;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
@@ -47,6 +49,14 @@ public class ManageProductCatalogJPanel extends javax.swing.JPanel {
             row[1] = p.getId();
             row[2] = p.getPrice();
             model.addRow(row);
+        }
+        
+        if(supplier.getLogoImage() != null) {
+            ImageIcon logo = supplier.getLogoImage();
+            ImageIcon logoImage = new ImageIcon(logo.getImage().getScaledInstance(150, 150, Image.SCALE_SMOOTH));
+            imgLogo.setIcon(logoImage);
+        } else {
+            imgLogo.setText("");
         }
     }
 

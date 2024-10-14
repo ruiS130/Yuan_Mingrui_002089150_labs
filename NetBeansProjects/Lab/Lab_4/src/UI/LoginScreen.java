@@ -142,7 +142,7 @@ public class LoginScreen extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(this, "Please select a supplier to login!");
                 return;
             } else {
-                selectedPanel = new SupplierWorkAreaJPanel(mainWorkArea, selectedSupplier);
+                selectedPanel = new SupplierWorkAreaJPanel(mainWorkArea, selectedSupplier, supplierDirectory);
             }
         }
         
@@ -172,7 +172,7 @@ public class LoginScreen extends javax.swing.JPanel {
         cmbRoles.removeAllItems();
 
         AdminWorkAreaJPanel adminPanel = new AdminWorkAreaJPanel(mainWorkArea, supplierDirectory);
-        SupplierWorkAreaJPanel supplierPanel = new SupplierWorkAreaJPanel(mainWorkArea, selectedSupplier);
+        SupplierWorkAreaJPanel supplierPanel = new SupplierWorkAreaJPanel(mainWorkArea, selectedSupplier, supplierDirectory);
 
         cmbRoles.addItem(adminPanel);
         cmbRoles.addItem(supplierPanel);

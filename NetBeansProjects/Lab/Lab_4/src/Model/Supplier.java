@@ -15,7 +15,7 @@ public class Supplier {
     private String supplyName;
     private ProductCatalog productCatalog;
     private ImageIcon logoImage;
-
+    
     public ImageIcon getLogoImage() {
         return logoImage;
     }
@@ -26,6 +26,7 @@ public class Supplier {
     
     public Supplier() {
         productCatalog = new ProductCatalog();
+        logoImage = new ImageIcon("src/PICS/Logo.png");
     }
 
     public String getSupplyName() {

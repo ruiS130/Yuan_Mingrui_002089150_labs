@@ -5,6 +5,7 @@
 package Model;
 
 import java.util.ArrayList;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -62,6 +63,9 @@ public class ProductCatalog {
         prod1.addNewFeature().setName("Refresh Rate").setValue("60 FPS");
         addProduct(prod1);
         
+        ImageIcon moniImg = new ImageIcon("src/PICS/monitor.png");
+        prod1.setLogoImage(moniImg);
+        
         Product prod2 = new Product();
         prod2.setName("Music Player");
         prod2.setPrice(230);
@@ -71,6 +75,9 @@ public class ProductCatalog {
         prod2.addNewFeature().setName("Battery").setValue("5000 mAh");
         addProduct(prod2);
         
+        ImageIcon musImg = new ImageIcon("src/PICS/musicplayer.png");
+        prod2.setLogoImage(musImg);
+        
         Product prod3 = new Product();
         prod3.setName("Laptop");
         prod3.setPrice(1300);
@@ -79,6 +86,9 @@ public class ProductCatalog {
         prod3.addNewFeature().setName("Screen Size").setValue("16 inch ");
         prod3.addNewFeature().setName("Battery").setValue("10000 mAh");
         addProduct(prod3);
+        
+        ImageIcon laptopImg = new ImageIcon("src/PICS/laptop.png");
+        prod3.setLogoImage(laptopImg);
         
     }
 }
