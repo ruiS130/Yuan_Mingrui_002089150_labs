@@ -53,7 +53,9 @@ public class EditSuppJPanel extends javax.swing.JPanel {
         txtName.setText(supplier.getSupplyName());
         
         if(supplier.getLogoImage() != null) {
-            imgLogo.setIcon(supplier.getLogoImage());
+            ImageIcon logo = supplier.getLogoImage();
+            ImageIcon logoImage = new ImageIcon(logo.getImage().getScaledInstance(150, 150, Image.SCALE_SMOOTH));
+            imgLogo.setIcon(logoImage);
         } else {
             imgLogo.setText("<No Image>");
         }
