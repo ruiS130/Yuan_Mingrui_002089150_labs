@@ -5,6 +5,7 @@
 package Model;
 
 import java.util.ArrayList;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -15,6 +16,7 @@ public class Product {
     private String name;
     private int price;
     private int id;
+    private ImageIcon logoImage;
     
     private ArrayList<Feature> features;
 
@@ -55,7 +57,13 @@ public class Product {
         this.features = features;
     }
 
-    
+    public ImageIcon getLogoImage() {
+        return logoImage;
+    }
+
+    public void setLogoImage(ImageIcon logoImage) {
+        this.logoImage = logoImage;
+    }
     @Override
     public String toString() {
         return name;
@@ -68,3 +76,7 @@ public class Product {
     }
     
 }
+
+//1. Extend "features" so that different product can share same features with different values.
+//2. Add images to products..
+//3. Let the supplier update his own profile

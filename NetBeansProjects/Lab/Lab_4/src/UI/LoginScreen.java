@@ -21,7 +21,7 @@ public class LoginScreen extends javax.swing.JPanel {
 
     JPanel mainWorkArea;
     SupplierDirectory supplierDirectory;
-    Supplier selectedSupplier = null;
+    Supplier selectedSupplier;
     
     /**
      * Creates new form LoginScreen
