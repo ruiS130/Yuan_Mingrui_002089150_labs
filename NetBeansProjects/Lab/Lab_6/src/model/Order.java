@@ -25,8 +25,25 @@ public class Order {
         this.orderItemList = orderItemList;
     }
     
-    public void addNewOrderItem(){
-        
+    public void addNewOrderItem(Product product, double price, int quantity){
+        OrderItem orderItem = new OrderItem(product, price, quantity);
+        orderItemList.add(orderItem);
+    }
+    
+    public void deleteItem(OrderItem item){
+        this.orderItemList.remove(item);
+    }
+    
+
+    public OrderItem findProduct(Product product) {
+        ArrayList<OrderItem> al = this.getOrderItemList();
+        for(int i = 0; i < al.size(); i++) {
+            OrderItem oi = orderItemList.get(i);
+            if(oi.getProduct().equals(product)) {
+                return oi;
+            }
+        }
+        return null;
     }
     
 }
